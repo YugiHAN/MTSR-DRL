@@ -8,106 +8,86 @@ Implementation of the paper:
 
 ## Environment Setup
 
-Create a Python environment (recommended: Python 3.8):
+### 1. Create a Python environment
+
+It is recommended to use **Python 3.8** or **Python 3.9** with a dedicated virtual environment.
+
+Using `conda`:
 
 ```bash
 conda create -n mtsr-drl python=3.8
 conda activate mtsr-drl
 ````
 
-Install dependencies:
+Using `venv`:
+
+```bash
+python -m venv mtsr-drl
+source mtsr-drl/bin/activate
+```
+
+### 2. Install dependencies
+
+Install the required packages listed in `requirements.txt`: 
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Main dependencies include PyTorch, NumPy, Pandas, OR-Tools, and tqdm. 
-
+---
 
 ## Data Generation
 
-Configure parameters in `params.py`, then generate data:
+Before generating data, configure the required parameters in `params.py`, including dataset settings, problem size, and related options.
+
+After setting `params.py`, generate the data by directly running:
 
 ```bash
 python data_utils.py
 ```
-
 ---
 
 ## Training
 
-Train the model:
+After configuring `params.py`, start training by directly running:
 
 ```bash
 python train.py
 ```
 
-Models and logs are saved under:
-
-```
-./trained_network/
-./train_log/
-```
-
 ---
 
-## Testing (Learned Model)
+## Testing the Trained Model
 
-Test trained models:
+After configuring `params.py` and preparing the trained model, test the learned policy by directly running:
 
 ```bash
 python test_trained_model.py
 ```
 
-Default mode uses the **greedy strategy**.
-
 ---
 
-## Testing (Heuristic Baselines)
+## Testing Heuristic Baselines
 
-Run heuristic methods:
+To evaluate heuristic baselines (FIFO+SPT, MOPNR+SPT, MWKR+SPT, FIFO+EET, MOPNR+EET, MWKR+EET), directly run:
 
 ```bash
 python test_heuristic.py
 ```
 
-Evaluated rules:
-
-```python
-['FIFO+SPT', 'MOPNR+SPT', 'MWKR+SPT',
- 'FIFO+EET', 'MOPNR+EET', 'MWKR+EET']
-```
 
 ---
 
-## Testing (OR-Tools & Gurobi)
+## Testing OR-Tools and Gurobi in the MIC Environment
 
-Run:
+To test exact or optimization-based solvers **OR-Tools** and **Gurobi** in the MIC environment, directly run:
 
 ```bash
 python ortools_mic.py
 ```
 
-Notes:
 
-* OR-Tools is installed via `requirements.txt`. 
-* Gurobi requires separate installation and a valid license:
 
-```bash
-pip install gurobipy
-```
-
----
-
-## Workflow
-
-```bash
-python data_utils.py
-python train.py
-python test_trained_model.py
-python test_heuristic.py
-python ortools_mic.py
-```
 
 ```
 ```

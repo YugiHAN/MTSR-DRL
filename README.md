@@ -86,8 +86,6 @@ To test exact or optimization-based solvers **OR-Tools** and **Gurobi** in the M
 python ortools_mic.py
 ```
 
+## Acknowledgement
 
-
-
-```
-```
+The code framework is based on: https://github.com/wrqccc/fjsp-drl

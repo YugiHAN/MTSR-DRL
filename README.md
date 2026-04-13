@@ -1,9 +1,7 @@
 
 # MTSR-DRL
 
-Implementation of the paper:
-
-**MTSR-DRL: Multi-Timescale State Representation Fusion Augmented Deep Reinforcement Learning for the Modular Hospital Fit-out Scheduling**
+This code is the implementation of the paper: **MTSR-DRL: Multi-Timescale State Representation Fusion Augmented Deep Reinforcement Learning for the Modular Hospital Fit-out Scheduling**
 
 
 ## Environment Setup

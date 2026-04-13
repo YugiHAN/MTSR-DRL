@@ -1,11 +1,10 @@
-````markdown
+
 # MTSR-DRL
 
 Implementation of the paper:
 
 **MTSR-DRL: Multi-Timescale State Representation Fusion Augmented Deep Reinforcement Learning for the Modular Hospital Fit-out Scheduling**
 
----
 
 ## Environment Setup
 
@@ -24,7 +23,6 @@ pip install -r requirements.txt
 
 Main dependencies include PyTorch, NumPy, Pandas, OR-Tools, and tqdm. 
 
----
 
 ## Data Generation
 
